@@ -6,4 +6,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     # Return the sum of corresponding elements
     return (a1 + b1, a2 + b2)
-
