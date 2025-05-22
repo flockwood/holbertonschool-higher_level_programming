@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a rectangle class with width, height validation, and string output."""
+"""Defines a rectangle with validated width, height, and printable output."""
 
 
 class Rectangle:
@@ -74,13 +74,14 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Return a string representation of the rectangle using '#' characters.
+        """Return the rectangle as a string of '#' characters.
 
         Returns:
-            str: Rectangle drawn with '#' or empty string if width or height is 0.
+            str: Rectangle drawn with '#' or an empty string.
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(
-            "#" * self.__width for _ in range(self.__height)
-        )
+        lines = []
+        for _ in range(self.__height):
+            lines.append("#" * self.__width)
+        return "\n".join(lines)
