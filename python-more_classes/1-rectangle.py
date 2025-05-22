@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class with width and height validation."""
-
+ 
 
 class Rectangle:
     """Represents a rectangle."""
@@ -26,11 +26,19 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Set the width of the rectangle with validation."""
+        """Set the width of the rectangle with validation.
+
+        Args:
+            value (int): The width to set.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0") 
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
@@ -40,9 +48,17 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Set the height of the rectangle with validation."""
+        """Set the height of the rectangle with validation.
+
+        Args:
+            value (int): The height to set.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must be >= 0")  
+            raise ValueError("height must be >= 0")
         self.__height = value
