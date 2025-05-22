@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Defines a rectangle class with width, height validation, and string representation."""
- 
+"""Defines a rectangle class with width, height validation, and string output."""
+
 
 class Rectangle:
     """Represents a rectangle."""
@@ -77,9 +77,10 @@ class Rectangle:
         """Return a string representation of the rectangle using '#' characters.
 
         Returns:
-            str: The rectangle as a string of '#' characters, or an empty
-                 string if width or height is 0.
+            str: Rectangle drawn with '#' or empty string if width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join("#" * self.__width for _ in range(self.__height))
+        return "\n".join(
+            "#" * self.__width for _ in range(self.__height)
+        )
