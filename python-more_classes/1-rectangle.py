@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class with width and height validation."""
- 
+
 
 class Rectangle:
     """Represents a rectangle."""
