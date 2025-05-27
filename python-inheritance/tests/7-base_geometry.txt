@@ -1,0 +1,35 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+# Prueba de area() (debe lanzar una excepción)
+>>> bg.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
+
+# Prueba con valores válidos (debe pasar sin errores)
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+
+# Prueba con un valor no entero (debe lanzar TypeError)
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+
+>>> bg.integer_validator("value", 3.14)
+Traceback (most recent call last):
+    ...
+TypeError: value must be an integer
+
+# Prueba con un número <= 0 (debe lanzar ValueError)
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+    ...
+ValueError: age must be greater than 0
+
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+    ...
+ValueError: distance must be greater than 0
