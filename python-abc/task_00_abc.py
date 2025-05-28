@@ -2,25 +2,27 @@
 
 from abc import ABC, abstractmethod
 
-class Animal(ABC):
 
-    """
-    Abstract class that defines the base structure for the animal.
-    Obligates all subclasses to implement the sound() method.
-    """
+class Animal(ABC):
+    """Abstract base class that defines the interface for animals."""
+
     @abstractmethod
     def sound(self):
-        """Abstract method that every sublass must include."""
+        """Return the sound this animal makes."""
         pass
 
+
 class Dog(Animal):
-    """
-    Class that represents a dog. Implements the sound() method.
-    """
+    """Concrete class representing a dog."""
+
     def sound(self):
+        """Return the sound this dog makes."""
         return "Bark"
 
+
 class Cat(Animal):
-    """
-    Class that represents a cat. Implements the sound() method.
-    """
+    """Concrete class representing a cat."""
+
+    def sound(self):
+        """Return the sound this cat makes."""
+        return "Meow"
