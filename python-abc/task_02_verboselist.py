@@ -2,22 +2,22 @@
 
 from abc import ABC, abstractmethod
 
-
 """
 This module defines the Verboselist class, which extends the functionality
-of the class 'list' in Python to print messages when you deleter or fix
-elements.
+of Python's built-in 'list' class to print messages when elements are
+added or removed.
 """
+
 
 class Verboselist(list):
     """
-    Class that extends 'list' to notify when it has changes.
+    A list subclass that provides verbose output for certain list operations.
     """
 
     def append(self, item):
         """
-        Adds an element to the list, and show a message.
-        
+        Add an element to the list and print a message.
+
         :param item: Element to add.
         """
         super().append(item)
@@ -25,8 +25,9 @@ class Verboselist(list):
 
     def extend(self, iterable):
         """
-        Adds multiple elements to the list and show a message.
-        :param iterable: Colection of elements to add.
+        Add multiple elements to the list and print a message.
+
+        :param iterable: Collection of elements to add.
         """
         count = len(list(iterable))
         super().extend(iterable)
@@ -35,9 +36,9 @@ class Verboselist(list):
 
     def remove(self, item):
         """
-        Elimantes an element from the list and shows a message.
-        
-        :param item: Element to eliminate.
+        Remove an element from the list and print a message.
+
+        :param item: Element to remove.
         """
         if item in self:
             print(f"Removed [{item}] from the list.")
@@ -47,10 +48,11 @@ class Verboselist(list):
 
     def pop(self, index=-1):
         """
-        Eliminates an element from the list by index and show a message.
-        
-        :param index: Index from the element to eliminate (has a defect, last one).
-        :return: Eliminated element or none if list is empty.
+        Remove and return an element from the list by index,
+        printing a message.
+
+        :param index: Index of the element to remove (default is last).
+        :return: Removed element, or None if the list is empty.
         """
         if self:
             item = super().pop(index)
@@ -64,8 +66,8 @@ class Verboselist(list):
 if __name__ == "__main__":
     v1 = Verboselist([1, 2, 3])
 
-    v1.append(4) # "added [4] to the list."
-    v1.extend([5, 6]) # "Extended the list within [2] items."
-    v1.remove(2) # "Removed [2] from the list."
-    v1.pop() # "Popped [6] from the list."
-    v1.pop(0) # "Popped [1] from the list."
+    v1.append(4)         # "Added [4] to the list."
+    v1.extend([5, 6])    # "Extended the list with [2] items."
+    v1.remove(2)         # "Removed [2] from the list."
+    v1.pop()             # "Popped [6] from the list."
+    v1.pop(0)            # "Popped [1] from the list."
