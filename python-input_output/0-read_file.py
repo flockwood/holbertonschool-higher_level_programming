@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+"""
+This modile defines a single function, read_file
+which reads a UTF-8 encoded text file and prints 
+its contents to stdout, exactly as it appears on
+the file. No error handling is needed.
+"""
+
 
 def read_file(filename=''):
     """
