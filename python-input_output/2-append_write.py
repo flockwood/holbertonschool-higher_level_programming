@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """
 This module defines a single function, append_write.
 
