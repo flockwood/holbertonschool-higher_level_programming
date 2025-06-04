@@ -13,7 +13,7 @@ doesn't exist.
 def append_write(filename="", text=""):
     """
     Append a string to the end of a UTF-8 file and return characters added.
-    
+
     The function creates the file if it doesn't exist, or appends to the
     end of the file if it already exists.
 
