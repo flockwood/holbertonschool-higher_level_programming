@@ -9,6 +9,7 @@ for JSOn serialization of an object. All attributes are assumed to be
 serializable.
 """
 
+
 def class_to_json(obj):
     """
     Return the dictionary description of an object for JSOn serialization.
