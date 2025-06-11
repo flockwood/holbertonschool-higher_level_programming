@@ -40,6 +40,14 @@ def verify_password(username, password):
     return None
 
 
+@auth.error_handler
+def auth_error(status):
+    """
+    Handle basic authentication errors.
+    """
+    return jsonify({"error": "Unauthorized"}), 401
+
+
 @app.route('/basic-protected')
 @auth.login_required
 def basic_protected():
