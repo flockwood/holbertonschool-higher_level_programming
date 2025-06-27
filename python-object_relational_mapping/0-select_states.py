@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-List all states from the database hbtn_0e_usa
+List all states from the databasfe hbtn_0e_usa
 Usage: ./0-select_states.py <username> <password> <database>
 """
 
